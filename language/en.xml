@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en">
+	<category name="wcf.arma">
+		<item name="wcf.arma.headline"><![CDATA[ARMA Server Monitor]]></item>
+		<item name="wcf.arma.playerlist"><![CDATA[Playerlist]]></item>
+		<item name="wcf.arma.informations"><![CDATA[Informations]]></item>
+		<item name="wcf.arma.serverAddress"><![CDATA[IP-Address]]></item>
+		<item name="wcf.arma.serverPort"><![CDATA[Port]]></item>
+		<item name="wcf.arma.slots"><![CDATA[Slots]]></item>
+		<item name="wcf.arma.gamename"><![CDATA[Gamename]]></item>
+                <item name="wcf.arma.mapname"><![CDATA[Mapname]]></item>
+		<item name="wcf.arma.version"><![CDATA[Version]]></item>
+		<item name="wcf.arma.version_required"><![CDATA[required version]]></item>
+		<item name="wcf.arma.platform"><![CDATA[Platform (server)]]></item>
+		<item name="wcf.arma.startDate"><![CDATA[Round started]]></item>
+		<item name="wcf.arma.playername"><![CDATA[Playername]]></item>
+		<item name="wcf.arma.kills"><![CDATA[Kills]]></item>
+		<item name="wcf.arma.deaths"><![CDATA[Deaths]]></item>
+		<item name="wcf.arma.score"><![CDATA[Score]]></item>
+	</category>
+	<category name="wcf.acp">
+		<item name="wcf.acp.option.category.module.arma"><![CDATA[ARMA Server Monitor]]></item>
+		<item name="wcf.acp.option.category.arma"><![CDATA[ARMA Server Monitor]]></item>
+		<item name="wcf.acp.option.arma"><![CDATA[activate ARMA Server Monitor]]></item>
+		<item name="wcf.acp.option.category.arma.general"><![CDATA[Global Settings]]></item>
+		<item name="wcf.acp.option.arma_serverID"><![CDATA[ARMA Server-ID]]></item>
+		<item name="wcf.acp.option.arma_gameversion"><![CDATA[Game(Version)]]></item>
+		<item name="wcf.acp.option.arma_gameversion_arma"><![CDATA[ARMA]]></item>
+		<item name="wcf.acp.option.arma_gameversion_arma2"><![CDATA[ARMA II]]></item>
+		<item name="wcf.acp.option.arma_gameversion_arma3"><![CDATA[ARMA III]]></item>
+		
+		<item name="wcf.acp.group.option.category.user.board.arma"><![CDATA[ARMA Server Monitor]]></item>
+		<item name="wcf.acp.group.option.user.board.arma.canView"><![CDATA[Can view ARMA Server Monitor site]]></item>
+	</category>
+	<category name="wcf.page">
+		<item name="wcf.page.arma"><![CDATA[ARMA Server Monitor]]></item>
+	</category>
+</language>
