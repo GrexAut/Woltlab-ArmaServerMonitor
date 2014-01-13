@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/acpMenu.xsd">
+	<import>
+		<acpmenuitem name="wcf.acp.menu.link.community.arma">
+			<controller><![CDATA[wcf\lib\data\ArmaPage]]></controller>
+			<parent>wcf.acp.menu.link.community</parent>
+			<showorder>4</showorder>
+			<permissions>admin.community.arma.canView</permissions>
+		</acpmenuitem>
+		<acpmenuitem name="wcf.acp.menu.link.community.arma.list">
+			<controller><![CDATA[wcf\lib\data\ArmaListPage]]></controller>
+			<parent>wcf.acp.menu.link.community.arma</parent>
+			<showorder>1</showorder>
+			<permissions>admin.community.arma.canView</permissions>
+		</acpmenuitem>
+		<acpmenuitem name="wcf.acp.menu.link.community.arma.add">
+			<controller><![CDATA[wcf\lib\data\ArmaAddPage]]></controller>
+			<parent>wcf.acp.menu.link.community.arma</parent>
+			<showorder>2</showorder>
+			<permissions>admin.community.arma.canAdd</permissions>
+		</acpmenuitem>
+	</import>
+</data>

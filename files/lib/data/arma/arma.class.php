@@ -2,7 +2,7 @@
 namespace wcf\data\arma;
 use wcf\system\WCF;
 use wcf\system\exception\SystemException;
-
+use wcf\data\DatabaseObject;
 
 /**
  * @author	Gregor Ganglberger
@@ -12,22 +12,32 @@ use wcf\system\exception\SystemException;
  * @category 	ARMA Server Monitor
  */
  
-class Arma {
-	
-    private $serverID = ARMA_SERVERID;
-    private $gameversion = ARMA_GAMEVERSION;
+class Arma extends DatabaseObject{
+    
+    protected static $databaseTableName = 'arma_servers';
+
+    protected static $databaseTableIndexName = 'serverID';
+    
     private $xmlPath = "http://{version}.swec.se/server/xml/{serverID}";
     private $xml = false;
     
     
     
-    public function connect() {
-        $xmlPath = str_replace('{serverID}',$this->serverID,$this->xmlPath);
-        $xmlPath = str_replace('{version}',$this->gameversion,$xmlPath);
+
+    
+    
+    
+    public function connect($serverID,$gameversion) {
+        $xmlPath = str_replace('{serverID}',$serverID,$this->xmlPath);
+        $xmlPath = str_replace('{version}',$gameversion,$xmlPath);
         $this->xml = simplexml_load_file($xmlPath);
         if(!$this->xml) {
             return false;
         }
+    }
+    
+    public function disconnect() {
+        $this->xml = false;
     }
     
     public function getServerInfo() {

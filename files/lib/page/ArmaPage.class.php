@@ -1,6 +1,6 @@
 <?php
 namespace wcf\page;
-use wcf\data\arma\arma;
+use wcf\data\arma\Arma;
 use wcf\system\WCF;
 
 
@@ -14,15 +14,11 @@ use wcf\system\WCF;
  
  
 class ArmaPage extends AbstractPage {
-	/**
-	 * @see	\wcf\page\AbstractPage::$activeMenuItem
-	 */
 	public $activeMenuItem = 'wcf.page.arma';
         
-	/**
-	 * @see	\wcf\page\AbstractPage::$neededPermissions
-	 */
 	public $neededPermissions = array('user.board.arma.canView');
+        
+        public $className = 'wcf\data\arma\Arma';
         
 	/**
 	 * @see	\wcf\page\IPage::readParameters()
@@ -38,14 +34,34 @@ class ArmaPage extends AbstractPage {
 	public function assignVariables() {
 		parent::assignVariables();
 		
-                $server = new Arma();
-                $server->connect();
                 
-                
+                $servers = $this->getActiveServers();
+                foreach($servers as $server) {
+                    $server = (object) $server;
+                    $arma = new Arma($server->serverID);
+                    $arma->connect($server->serverID,$server->serverVersion);
+                    $servers[$server->serverID]['serverInfo'] = $arma->getServerInfo();
+                    $servers[$server->serverID]['players'] = $servers[$server->serverID]['serverInfo']['status'] == "playing" ? $arma->getPlayers() : false;
+                    $arma->disconnect();
+                }
                 WCF::getTPL()->assign(array(
-                    'serverInfo' => $server->getServerInfo(),
-                    'players' => $server->getPlayers(),
+                    'servers' => $servers
                 ));
                 
 	}
+        
+        
+        
+        public function getActiveServers() {
+            $result = array();
+            $sql = "SELECT	*
+                    FROM	wcf".WCF_N."_arma_servers
+                    WHERE	active = 1";
+            $statement = WCF::getDB()->prepareStatement($sql);
+            $statement->execute();
+            while($row = $statement->fetchArray()) {
+                $result[$row['serverID']] = $row;
+            }
+            return $result;
+        }
 }
