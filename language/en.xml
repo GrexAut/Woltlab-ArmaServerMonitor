@@ -8,7 +8,7 @@
 		<item name="wcf.arma.serverPort"><![CDATA[Port]]></item>
 		<item name="wcf.arma.slots"><![CDATA[Slots]]></item>
 		<item name="wcf.arma.gamename"><![CDATA[Gamename]]></item>
-                <item name="wcf.arma.mapname"><![CDATA[Mapname]]></item>
+        <item name="wcf.arma.mapname"><![CDATA[Mapname]]></item>
 		<item name="wcf.arma.version"><![CDATA[Version]]></item>
 		<item name="wcf.arma.version_required"><![CDATA[required version]]></item>
 		<item name="wcf.arma.platform"><![CDATA[Platform (server)]]></item>
@@ -17,20 +17,38 @@
 		<item name="wcf.arma.kills"><![CDATA[Kills]]></item>
 		<item name="wcf.arma.deaths"><![CDATA[Deaths]]></item>
 		<item name="wcf.arma.score"><![CDATA[Score]]></item>
+		<item name="wcf.arma.serverVersion"><![CDATA[Version]]></item>
+		<item name="wcf.arma.description"><![CDATA[Description]]></item>
 	</category>
-	<category name="wcf.acp">
-		<item name="wcf.acp.option.category.module.arma"><![CDATA[ARMA Server Monitor]]></item>
-		<item name="wcf.acp.option.category.arma"><![CDATA[ARMA Server Monitor]]></item>
-		<item name="wcf.acp.option.arma"><![CDATA[activate ARMA Server Monitor]]></item>
-		<item name="wcf.acp.option.category.arma.general"><![CDATA[Global Settings]]></item>
-		<item name="wcf.acp.option.arma_serverID"><![CDATA[ARMA Server-ID]]></item>
-		<item name="wcf.acp.option.arma_gameversion"><![CDATA[Game(Version)]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma"><![CDATA[ARMA]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma2"><![CDATA[ARMA II]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma3"><![CDATA[ARMA III]]></item>
-		
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.community.arma"><![CDATA[Manage ARMA Server]]></item>
+		<item name="wcf.acp.menu.link.community.arma.list"><![CDATA[List ARMA Server]]></item>
+		<item name="wcf.acp.menu.link.community.arma.add"><![CDATA[Add ARMA Server]]></item>
+	</category>
+	<category name="wcf.acp.group">
 		<item name="wcf.acp.group.option.category.user.board.arma"><![CDATA[ARMA Server Monitor]]></item>
-		<item name="wcf.acp.group.option.user.board.arma.canView"><![CDATA[Can view ARMA Server Monitor site]]></item>
+		<item name="wcf.acp.group.option.user.board.arma.canView"><![CDATA[Can view ARMA Server Monitor Site]]></item>
+		<item name="wcf.acp.group.option.category.admin.community.arma"><![CDATA[ARMA]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canView"><![CDATA[Can view Serverlist]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canAdd"><![CDATA[Can add Server]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canEdit"><![CDATA[Can edit Server]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canDelete"><![CDATA[Can delete Server]]></item>
+	</category>
+	<category name="wcf.acp.arma">
+		<item name="wcf.acp.arma.enable"><![CDATA[activate Server]]></item>
+		<item name="wcf.acp.arma.disable"><![CDATA[deactivate Server]]></item>
+		<item name="wcf.acp.arma.add"><![CDATA[add Server]]></item>
+		<item name="wcf.acp.arma.edit"><![CDATA[edit Server]]></item>
+		<item name="wcf.acp.arma.delete"><![CDATA[delete Server]]></item>
+		<item name="wcf.acp.arma.delete.sure"><![CDATA[Are you sure to delete this server? There is no way to undo this action!]]></item>		
+		<item name="wcf.acp.arma.delete.success"><![CDATA[The server was successfully removed from the list]]></item>
+		<item name="wcf.acp.arma.add.success"><![CDATA[The server was successfully added.]]></item>
+		<item name="wcf.acp.arma.edit.success"><![CDATA[The server has been successfully edited.]]></item>
+		<item name="wcf.acp.arma.serverID"><![CDATA[Server ID]]></item>
+		<item name="wcf.acp.arma.list"><![CDATA[ARMA Serververwaltung]]></item>
+		<item name="wcf.acp.arma.list.description"><![CDATA[Verwalten Sie Ihre ARMA Server]]></item>
+		<item name="wcf.acp.arma.serverVersion"><![CDATA[Version]]></item>
+		<item name="wcf.acp.arma.description"><![CDATA[Description]]></item>
 	</category>
 	<category name="wcf.page">
 		<item name="wcf.page.arma"><![CDATA[ARMA Server Monitor]]></item>

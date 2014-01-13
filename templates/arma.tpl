@@ -1,7 +1,7 @@
 {include file='documentHeader'}
 
 <head>
-	<title>{lang}wcf.samp.headline{/lang}</title>
+	<title>{lang}wcf.arma.headline{/lang}</title>
 	
 	{include file='headInclude'}
 
@@ -41,9 +41,13 @@
                     padding: 2%;
                     width: 50%;
                     margin: 0 auto;
+                    margin-bottom: 1%;
                 }
-                .serverinfo {
-                    line-height: 25px;
+                .serverinfo > .serverinfo{
+                    line-height: 20px;
+                }
+                .serverinfo > .left {
+                    width: 50%;
                 }
 	</style>
 </head>
@@ -61,38 +65,50 @@
 
 <div class="contentNavigation">
 </div>
-    <h2></h2>
+{foreach from=$servers item=$server}
     <div class="container marginTop">
+        
         <div class="serverinfo left">
-                <h2>{$serverInfo.hostname}</h2>
-                {lang}wcf.arma.serverAddress{/lang}: {$serverInfo.serverAddress}<br />
-                {lang}wcf.arma.serverPort{/lang}: {$serverInfo.serverPort}<br />
-                {lang}wcf.arma.slots{/lang}: {$serverInfo.players}/{$serverInfo.maxplayers}<br />
-                {lang}wcf.arma.gamename{/lang}: {$serverInfo.gamename}<br />
-                {lang}wcf.arma.mapname{/lang}: {$serverInfo.mapname}<br />
-                {lang}wcf.arma.version{/lang}: {$serverInfo.version} ({lang}wcf.arma.version_required{/lang}: {$serverInfo.version_required})<br />
-                {lang}wcf.arma.platform{/lang}: {$serverInfo.platform}<br />
-                {lang}wcf.arma.startDate{/lang}: {@$serverInfo.startDate|time}
+                <h2>{$server.serverInfo.hostname}</h2>
+                <div class="left serverinfo">
+                    {lang}wcf.arma.serverAddress{/lang}: {$server.serverInfo.serverAddress}<br />
+                    {lang}wcf.arma.serverPort{/lang}: {$server.serverInfo.serverPort}<br />
+                    {lang}wcf.arma.slots{/lang}: {$server.serverInfo.players}/{$server.serverInfo.maxplayers}<br />
+                    {lang}wcf.arma.gamename{/lang}: {$server.serverInfo.gamename}<br />
+                    {lang}wcf.arma.mapname{/lang}: {$server.serverInfo.mapname}<br />
+                    {lang}wcf.arma.version{/lang}: {$server.serverInfo.version} ({lang}wcf.arma.version_required{/lang}: {$server.serverInfo.version_required})<br />
+                    {lang}wcf.arma.platform{/lang}: {$server.serverInfo.platform}<br />
+                    {lang}wcf.arma.startDate{/lang}: {@$server.serverInfo.startDate|time}
+                </div>
+                {if $server.descr}
+                    <div class="left">
+                        {$server.descr}
+                    </div>
+                {/if}
+                <div class="clear"></div>
         </div>
-        <div class="left">
-            <h3>{lang}wcf.arma.playerlist{/lang}</h3>
-            <table class="table responsiveTable playerlist">
-                <thead>
-                    <tr>
-                        <th  width="250">{lang}wcf.arma.playername{/lang}</th><th  width="250">{lang}wcf.arma.kills{/lang}</th><th  width="250">{lang}wcf.arma.deaths{/lang}</th><th width=250>{lang}wcf.arma.score{/lang}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {foreach from=$players item=$player}
-                    <tr>
-                        <td width="250">{$player.name}</td><td width="250">{$player.kills}</td><td width="250">{$player.deaths}</td><td width="250">{$player.score}</td>
-                    </tr>
-                {/foreach}
-                </tbody>
-            </table>
-        </div>
+        {if $server.players}
+            <div class="left">
+                <h3>{lang}wcf.arma.playerlist{/lang}</h3>
+                <table class="table responsiveTable playerlist">
+                    <thead>
+                        <tr>
+                            <th  width="250">{lang}wcf.arma.playername{/lang}</th><th  width="250">{lang}wcf.arma.kills{/lang}</th><th  width="250">{lang}wcf.arma.deaths{/lang}</th><th width=250>{lang}wcf.arma.score{/lang}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {foreach from=$server.players item=$player}
+                        <tr>
+                            <td width="250">{$player.name}</td><td width="250">{$player.kills}</td><td width="250">{$player.deaths}</td><td width="250">{$player.score}</td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        {/if}
         <div class="clear"></div>
     </div>
+{/foreach}
 <div class="contentNavigation">
 	
 	{hascontent}

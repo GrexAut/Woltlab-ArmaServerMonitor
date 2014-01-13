@@ -9,6 +9,10 @@
 				<parent>user.board</parent>
 				<showorder>20</showorder>
 			</category>
+			<category name="admin.community.arma">
+				<parent>admin.community</parent>
+				<showorder>7</showorder>
+			</category>
 		</categories>
 		<options>
 			<option name="user.board.arma.canView">
@@ -16,6 +20,35 @@
 				<optiontype>boolean</optiontype>
 				<defaultvalue>0</defaultvalue>
 				<showorder>1</showorder>
+				<visible>1</visible>
+			</option>
+			<option name="admin.community.arma.canView">
+				<categoryname>admin.community.arma</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+				<showorder>1</showorder>
+				<enableoptions>admin.community.arma.canAdd,admin.community.arma.canEdit,admin.community.arma.canDelete</enableoptions>
+				<visible>1</visible>
+			</option>	
+			<option name="admin.community.arma.canAdd">
+				<categoryname>admin.community.arma</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+				<showorder>2</showorder>
+				<visible>1</visible>
+			</option>
+			<option name="admin.community.arma.canEdit">
+				<categoryname>admin.community.arma</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+				<showorder>3</showorder>
+				<visible>1</visible>
+			</option>				
+			<option name="admin.community.arma.canDelete">
+				<categoryname>admin.community.arma</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+				<showorder>4</showorder>
 				<visible>1</visible>
 			</option>	
 		</options>

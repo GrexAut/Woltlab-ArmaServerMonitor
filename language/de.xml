@@ -17,20 +17,38 @@
 		<item name="wcf.arma.kills"><![CDATA[Kills]]></item>
 		<item name="wcf.arma.deaths"><![CDATA[Verluste]]></item>
 		<item name="wcf.arma.score"><![CDATA[Punkte]]></item>
+		<item name="wcf.arma.serverVersion"><![CDATA[Version]]></item>
+		<item name="wcf.arma.description"><![CDATA[Beschreibung]]></item>
 	</category>
-	<category name="wcf.acp">
-		<item name="wcf.acp.option.category.module.arma"><![CDATA[ARMA Server Monitor]]></item>
-		<item name="wcf.acp.option.category.arma"><![CDATA[ARMA Server Monitor]]></item>
-		<item name="wcf.acp.option.arma"><![CDATA[ARMA Server Monitor aktivieren]]></item>
-		<item name="wcf.acp.option.category.arma.general"><![CDATA[Allgemeine Einstellungen]]></item>
-		<item name="wcf.acp.option.arma_serverID"><![CDATA[ARMA Server-ID]]></item>
-		<item name="wcf.acp.option.arma_gameversion"><![CDATA[Spiel (Version)]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma"><![CDATA[ARMA]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma2"><![CDATA[ARMA II]]></item>
-		<item name="wcf.acp.option.arma_gameversion_arma3"><![CDATA[ARMA III]]></item>
-		
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.community.arma"><![CDATA[ARMA Server verwalten]]></item>
+		<item name="wcf.acp.menu.link.community.arma.list"><![CDATA[ARMA Server auflisten]]></item>
+		<item name="wcf.acp.menu.link.community.arma.add"><![CDATA[ARMA Server hinzufügen]]></item>
+	</category>
+	<category name="wcf.acp.group">
 		<item name="wcf.acp.group.option.category.user.board.arma"><![CDATA[ARMA Server Monitor]]></item>
 		<item name="wcf.acp.group.option.user.board.arma.canView"><![CDATA[Kann ARMA Server Monitor Seite sehen]]></item>
+		<item name="wcf.acp.group.option.category.admin.community.arma"><![CDATA[ARMA]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canView"><![CDATA[Darf Serverliste sehen]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canAdd"><![CDATA[Darf Server hinzufügen]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canEdit"><![CDATA[Darf Server bearbeiten]]></item>
+		<item name="wcf.acp.group.option.admin.community.arma.canDelete"><![CDATA[Darf Server löschen]]></item>
+	</category>
+	<category name="wcf.acp.arma">
+		<item name="wcf.acp.arma.enable"><![CDATA[Server aktivieren]]></item>
+		<item name="wcf.acp.arma.disable"><![CDATA[Server deaktivieren]]></item>
+		<item name="wcf.acp.arma.add"><![CDATA[Server hinzufügen]]></item>
+		<item name="wcf.acp.arma.edit"><![CDATA[Server bearbeiten]]></item>
+		<item name="wcf.acp.arma.delete"><![CDATA[Server löschen]]></item>
+		<item name="wcf.acp.arma.delete.sure"><![CDATA[Wollen Sie WIRKLICH diesen Server löschen? Dieser Vorgang kann nicht rückgängig gemacht werden!]]></item>		
+		<item name="wcf.acp.arma.delete.success"><![CDATA[Der Server wurde aus der Liste erfolgreich gelöscht.]]></item>
+		<item name="wcf.acp.arma.add.success"><![CDATA[Der Server wurde in die Liste erfolgreich angelegt.]]></item>
+		<item name="wcf.acp.arma.edit.success"><![CDATA[Die Servereinstellungen wurden erfolgreich geändert.]]></item>
+		<item name="wcf.acp.arma.serverID"><![CDATA[Server ID]]></item>
+		<item name="wcf.acp.arma.list"><![CDATA[ARMA Serververwaltung]]></item>
+		<item name="wcf.acp.arma.list.description"><![CDATA[Verwalten Sie Ihre ARMA Server]]></item>
+		<item name="wcf.acp.arma.serverVersion"><![CDATA[Version]]></item>
+		<item name="wcf.acp.arma.description"><![CDATA[Beschreibung]]></item>
 	</category>
 	<category name="wcf.page">
 		<item name="wcf.page.arma"><![CDATA[ARMA Server Monitor]]></item>

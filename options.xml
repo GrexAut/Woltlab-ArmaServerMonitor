@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/option.xsd">
-	<import>
-		<categories>
-			<category name="module.arma">
-				<parent>module</parent>
-			</category>
-			
-			<category name="arma">
-				<showorder>4</showorder>
-				<options>module_arma</options>
-			</category>
-			
-			<category name="arma.general">
-				<parent>arma</parent>
-			</category>
-		</categories>
-		<options>
-			<option name="module_arma">
-				<categoryname>module.arma</categoryname>
-				<optiontype>boolean</optiontype>
-				<defaultvalue>1</defaultvalue>
-				<enableoptions><![CDATA[arma.general]]></enableoptions>
-			</option>
-			<option name="arma_serverID">
-				<categoryname>arma.general</categoryname>
-				<optiontype>integer</optiontype>
-				<defaultvalue>426128</defaultvalue>
-			</option>
-			<option name="arma_gameversion">
-				<categoryname>arma.general</categoryname>
-				<optiontype>radioButton</optiontype>
-                                <selectoptions><![CDATA[arma2:wcf.acp.option.arma_gameversion_arma2
-arma3:wcf.acp.option.arma_gameversion_arma3]]></selectoptions>
-			</option>
-		</options>
-	</import>
+	<delete>
+		<option name="arma_serverID" />
+		<option name="module_arma" />
+		<option name="arma_gameversion" />
+		<category name="arma.general" />
+		<category name="module.arma" />
+	</delete>
 </data>

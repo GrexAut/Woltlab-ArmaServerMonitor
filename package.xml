@@ -5,7 +5,7 @@
 		<packagename language="de"><![CDATA[ARMA Server Monitor]]></packagename>
 		<packagedescription><![CDATA[Prints statistic of your ARMA Server]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Anzeige von div. Statistiken Ihres ARMA Servers]]></packagedescription>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<date>2013-12-29</date>
 	</packageinformation>
 	
@@ -21,13 +21,27 @@
 	<instructions type="install">
 		<instruction type="file">files.tar</instruction>
 		<instruction type="language">language/*.xml</instruction>
-		<instruction type="option">options.xml</instruction>
 		<instruction type="pageMenu">pagemenu.xml</instruction>
 		<instruction type="template">templates.tar</instruction>
 		<instruction type="userGroupOption">userGroupOption.xml</instruction>
+		<instruction type="acpTemplate">acptemplates.tar</instruction>
+		<instruction type="acpMenu">acpmenu.xml</instruction>
+		<instruction type="sql">install.sql</instruction>
+	</instructions>
+	
+	<instructions type="update" fromversion="1.0.1">
+		<instruction type="file">files.tar</instruction>
+		<instruction type="pageMenu">pagemenu.xml</instruction>
+		<instruction type="acpTemplate">acptemplates.tar</instruction>
+		<instruction type="userGroupOption">userGroupOption.xml</instruction>
+		<instruction type="language">language/*.xml</instruction>
+		<instruction type="acpMenu">acpmenu.xml</instruction>
+		<instruction type="option">options.xml</instruction>
 	</instructions>
 	
 	<instructions type="update" fromversion="1.0.0">
 		<instruction type="file">files.tar</instruction>
+		<instruction type="pageMenu">pagemenu.xml</instruction>
 	</instructions>
+
 </package>
